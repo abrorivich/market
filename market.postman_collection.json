@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "5fe39fc0-b8ad-49e3-9f62-10ed8c04af59",
+		"name": "market",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34602913"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "admin create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/user/admin/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"user",
+								"admin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/auth/github/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"auth",
+								"github",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NTgxNjk1fQ.QD08ceXBBPfqnMdtSsYuVvX167QO21nrIO6m2W6Hwrk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/api/auth/github/getMe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"auth",
+								"github",
+								"getMe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token olish",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"7777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/user/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"user",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI4NTkwNDQ4fQ.F45HRw4YCPMdgMKD-p6B2YfYghuhsajAIfhotL2j0J4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Otkan kunlar\",\r\n    \"author\": \"Abdurasulov Avazjon\",\r\n    \"price\": 30000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/gyms/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"gyms",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/gyms/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"gyms",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/gyms/getById/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"gyms",
+								"getById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI4NTgxNzk4fQ.xr7Fyv2pwRFeJY5FO1de-TZ0t4H60Rx4tENkE28KRTE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Mehribdon chayon\",\r\n    \"author\": \"Abdurasulov Avazjon\",\r\n    \"price\": 50000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/gyms/update/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"gyms",
+								"update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI4NTgxNzk4fQ.xr7Fyv2pwRFeJY5FO1de-TZ0t4H60Rx4tENkE28KRTE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/api/gyms/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"gyms",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searc bosh harf bn tekshiradi",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"O\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/gyms/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"gyms",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "backet",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NTg3MTA2fQ.ko6H8JQm9VQF6HPBzeYiBNpuNRjQ7ifdy9H5nSarulQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"bookId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/basket/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"basket",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/basket/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"basket",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI4NTgxNzk4fQ.xr7Fyv2pwRFeJY5FO1de-TZ0t4H60Rx4tENkE28KRTE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"bookId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/api/basket/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"basket",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI4NTg1MzY0fQ.STql8v_4pwIgTianBOsb3DwA5vjvvERCW1JHr1L-5sI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/api/basket/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"basket",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NTkwNDM1fQ.3MPK0K08837tnwUcQOwcAy7QuUyYoolLNUiyCDHrS7U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/api/order/create/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"order",
+								"create",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7777/api/order/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"order",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMeOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4NTkwNDM1fQ.3MPK0K08837tnwUcQOwcAy7QuUyYoolLNUiyCDHrS7U",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/api/order/getMeOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"api",
+								"order",
+								"getMeOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
